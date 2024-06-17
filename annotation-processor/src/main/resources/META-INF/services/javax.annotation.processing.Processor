@@ -1,0 +1,7 @@
+#com.example.classannotation.processor.MyLoggerProcessor
+#com.example.classannotation.processor.CustomLoggerProcessor
+#com.example.classannotation.processor.CommonLoggerProcessor
+#com.example.classannotation.processor.MySlf4jProcessor
+#com.example.classannotation.processor.ByteBuddyProcessor
+#com.example.classannotation.processor.SSTLoggerProcessor
+com.example.classannotation.processor.GreetingMethodProcessor

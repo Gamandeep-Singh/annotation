@@ -1,0 +1,44 @@
+buildscript {
+    ext {
+        snakeyaml_version = "1.29"
+        jackson_version = "2.13.0"
+    }
+    repositories {
+        google(); mavenCentral()
+    }
+}
+
+plugins {
+    id "java-gradle-plugin"
+}
+
+group = "com.example"
+version = "1.0"
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+gradlePlugin {
+    plugins {
+        create("AddOpensPlugin") {
+            id = "addopens"
+            implementationClass = "com.example.classannotation.AddOpensPlugin"
+        }
+    }
+}
+
+dependencies {
+    implementation gradleApi()
+}
+
+//task sourceJar(type: Jar) {
+//    classifier "sources"
+//}
+
+task sourceJar(type: Jar) {
+    archiveClassifier.set("sources")
+}

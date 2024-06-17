@@ -1,0 +1,5 @@
+rootProject.name = 'classannotation'
+include 'addopens'
+include 'logger'
+include 'annotation-processor'
+include 'app'
